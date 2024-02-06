@@ -2,7 +2,6 @@
   background: #1e1823;
   display: flex;
   width: 1200px;
-  height: 344px;
   justify-content: center;
   align-items: center;
   padding: 50px;
@@ -18,7 +17,6 @@
 
 .advantages-item {
   width: calc((100% - 140px) / 3);
-  height: 244px;
   display: flex;
   gap: 18px;
   align-items: center;
@@ -103,7 +101,6 @@
   .advantages {
     display: flex;
     width: 375px;
-    height: 758px;
     padding: 20px;
     flex-direction: column;
     justify-content: flex-start;
@@ -119,7 +116,6 @@
   .advantages-list {
     display: flex;
     width: 335px;
-    height: 718px;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;

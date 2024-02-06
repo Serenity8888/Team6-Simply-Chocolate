@@ -40,8 +40,8 @@ img {
 }
 
 @media (max-width: 767px) {
-  container {
-    width: 375px;
+  .container {
+    max-width: 375px;
     margin: 0 auto;
   }
 }

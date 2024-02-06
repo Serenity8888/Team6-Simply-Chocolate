@@ -35,55 +35,60 @@ button {
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: 24px 32px 32px 32px;
+  padding: 24px 32px 32px 32px;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 1136px;
+  gap: 188px;
 }
 
-.header-logo {
+.header-logo-container {
   display: flex;
-  flex-direction: row;
+  gap: 4px;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  color: var(--black);
+}
+.header-logo {
+  color: #111;
   font-family: Montserrat;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
-  letter-spacing: 0.54px;
-  gap: 4px;
+  letter-spacing: -0.54px;
 }
 
-.header-logo-style {
+.header-logo span {
+  color: #111;
   font-family: Montserrat;
-  font-style: italic;
   font-size: 18px;
   font-style: italic;
   font-weight: 700;
-  line-height: 20px;
-  letter-spacing: 0.54px;
+  line-height: 20px; /* 111.111% */
+  letter-spacing: -0.54px;
 }
 
 .icon-logo {
+  width: 24px;
+  height: 24px;
   stroke: var(--orange);
   fill: var(--pastel-orange);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 137px;
 }
 
 .nav-list {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 24px;
 }
 
@@ -125,7 +130,7 @@ button {
   stroke: var(--orange);
 }
 
-.burger-menu {
+.header-burger-menu {
   display: none;
 }
 
@@ -133,10 +138,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0px 32px 72px 32px;
+  padding: 0px 32px 72px 32px;
 }
 
-.hero-background {
+.hero-container {
   background: linear-gradient(
       180deg,
       var(--black-gradient1) 0%,
@@ -150,10 +155,16 @@ button {
   border-radius: 30px;
   width: 1136px;
   height: 600px;
+  padding-top: 381px;
 }
 
-.hero-content {
-  margin: 387px 40px 40px 40px;
+.hero-content-container {
+  display: flex;
+  width: 1056px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  margin: 0 auto;
 }
 
 .hero-caption {
@@ -165,34 +176,41 @@ button {
   font-weight: 500px;
   line-height: 34px;
   letter-spacing: -0.84px;
-  margin-bottom: 32px;
-  cursor: default;
 }
 
-.hero-buttons {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.navigate-button {
+.hero-navigation-container {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 552px;
+}
+
+.hero-buttons-container {
+  display: flex;
+  align-items: center;
   gap: 14px;
 }
 
 .buy-button {
   color: var(--white);
   background-color: var(--orange);
+  width: 144px;
+  height: 45px;
   border-radius: 100px;
-  padding: 14px 40px;
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
+  display: flex;
+  padding: 14px 40px;
+  align-items: flex-start;
+  gap: 14px;
   transition: color var(--animation), background-color var(--animation);
 }
 
@@ -208,16 +226,18 @@ button {
 }
 
 .how-button {
-  color: var(--white);
-  background-color: transparent;
   border: 1px solid var(--white);
   border-radius: 100px;
-  padding: 14px 40px;
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  color: var(--white);
+  width: 183px;
+  height: 45px;
+  gap: 14px;
+  background-color: transparent;
   transition: color var(--animation), border var(--animation);
 }
 
@@ -232,30 +252,17 @@ button {
   border: 1px solid var(--white);
 }
 
-.scroll-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 14px;
-}
-
-.scroll-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
+.hero-scroll-text {
+  color: #fff;
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 18px; /* 128.571% */
   letter-spacing: -0.42px;
-  cursor: default;
-  transition: color var(--animation);
 }
 
-.scroll-button {
+.hero-scroll-button {
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -266,162 +273,81 @@ button {
   transition: background-color var(--animation);
 }
 
-.scroll-down {
+.hero-scroll-down {
+  width: 14px;
+  height: 8px;
   fill: var(--orange);
   transition: fill var(--animation);
 }
 
-.scroll-container {
+.hero-scroll-container {
+  display: flex;
   width: 163px;
   height: 53px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 14px;
   border-radius: 10px;
   background: #1e1823;
 }
 
-.scroll-container:hover,
-.scroll-container:focus {
+.hero-scroll-container:hover,
+.hero-scroll-container:focus {
   background: transparent;
 }
 
-.scroll-container:hover p,
-.scroll-container:focus p {
+.hero-scroll-container:hover p,
+.hero-scroll-container:focus p {
   color: var(--orange);
 }
 
-.scroll-container:hover a,
-.scroll-container:focus a {
+.hero-scroll-container:hover a,
+.hero-scroll-container:focus a {
   background-color: var(--orange);
 }
 
-.scroll-container:hover svg,
-.scroll-container:focus svg {
+.hero-scroll-container:hover svg,
+.hero-scroll-container:focus svg {
   fill: var(--white);
 }
 
-/* Tablet View */
-@media only screen and (max-width: 768px) {
-  .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 24px 32px 24px 32px;
-  }
-
-  .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 704px;
-  }
-
-  .header-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: var(--black);
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: -0.42px;
-    gap: 4px;
-  }
-
-  .header-logo-style {
-    font-family: Montserrat;
-    font-style: italic;
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: -0.42px;
-  }
-
-  .nav-list,
-  .header-socials {
-    display: none;
-  }
-
-  .burger-menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  .icon-burger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    stroke: var(--black);
-    fill: none;
-    transition: var(--animation);
-  }
-
-  .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 32px 50px 32px;
-  }
-
-  .hero-background {
-    background: linear-gradient(
-        180deg,
-        var(--black-gradient1) 0%,
-        var(--black-gradient2) 100%
-      ),
-      url('/src/images/hero-bg.jpg'),
-      lightgrey -427.239px -24.924px / 195.428% 103.07% no-repeat;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    width: 704px;
-    height: 890px;
-  }
-
-  .hero-content {
-    margin: 671px 40px 40px 40px;
-  }
-}
-
 /* Mobile View */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 767px) {
   .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 20px 14px 20px;
+    padding: 20px 20px 14px 20px;
   }
 
   .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 335px;
+    gap: 138px;
+    justify-content: center;
+  }
+
+  .nav-container {
+    display: none;
+    position: absolute;
   }
 
   .header-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: var(--black);
+    color: #111;
     font-family: Montserrat;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: 18px;
     letter-spacing: -0.42px;
-    gap: 4px;
   }
 
+  .header-logo span {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.42px;
+  }
   .header-logo-style {
     font-family: Montserrat;
     font-style: italic;
@@ -432,36 +358,30 @@ button {
     letter-spacing: -0.42px;
   }
 
-  .nav-list,
-  .header-socials {
-    display: none;
+  .icon-logo {
+    width: 21px;
+    height: 21px;
   }
 
-  .burger-menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  .header-burger-menu {
+    background: none;
+    display: block;
   }
 
-  .icon-burger {
+  .header-icon-burger {
     display: flex;
     align-items: center;
     justify-content: center;
-    stroke: var(--black);
-    fill: none;
     transition: var(--animation);
     width: 28px;
     height: 28px;
   }
 
-  .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 20px 71px 20px;
+  .hero {
+    padding: 0px 20px 71px 20px;
   }
 
-  .hero-background {
+  .hero-container {
     background: linear-gradient(
         180deg,
         var(--black-gradient1) 0%,
@@ -474,52 +394,49 @@ button {
     background-size: cover;
     border-radius: 30px;
     width: 335px;
-    height: 621px;
+    min-height: 621px;
+    padding: 395px 20px 21px;
   }
 
-  .hero-content {
-    margin: 395px 20px 21px 20px;
+  .hero-content-container {
+    display: flex;
+    width: 295px;
+    height: 205px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    margin: 0;
   }
 
   .hero-caption {
     width: 295px;
     height: 72px;
-    color: var(--white);
+    color: #fff;
     font-family: Montserrat;
     font-size: 20px;
-    font-weight: 500px;
-    line-height: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 120% */
     letter-spacing: -0.6px;
-    margin-bottom: 32px;
-    cursor: default;
-  }
-
-  .hero-buttons {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 32px;
   }
 
   .buy-button {
-    color: var(--white);
-    background-color: var(--orange);
-    border-radius: 100px;
+    width: 120px;
+    display: flex;
     padding: 12px 28px;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    align-items: center;
+    gap: 14px;
+    border-radius: 100px;
+    background: #fd9222;
     transition: color var(--animation), background-color var(--animation);
   }
 
   .how-button {
+    width: 159px;
     color: var(--white);
     background-color: transparent;
     border: 1px solid var(--white);
     border-radius: 100px;
-    padding: 12px 28px;
     font-family: Montserrat;
     font-size: 14px;
     font-style: normal;
@@ -528,15 +445,25 @@ button {
     transition: color var(--animation), border var(--animation);
   }
 
-  .scroll-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
+  .hero-navigation-container {
+    gap: 32px;
+    width: 299px;
+    height: 101px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .scroll-text {
+  .hero-scroll-container {
+    display: flex;
+    width: 140px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #1e1823;
+  }
+
+  .hero-scroll-text {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -547,11 +474,10 @@ button {
     font-weight: 500;
     line-height: 14px;
     letter-spacing: -0.36px;
-    cursor: default;
     transition: color var(--animation);
   }
 
-  .scroll-button {
+  .hero-scroll-button {
     width: 28px;
     height: 28px;
     border-radius: 50%;
