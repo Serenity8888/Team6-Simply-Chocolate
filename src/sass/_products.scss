@@ -114,8 +114,6 @@ div.swiper-pagination {
   display: inline-flex;
   gap: 13px;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto;
 }
 
 .swiper-pagination.swiper-pagination-horizontal.swiper-pagination-bullets
@@ -134,4 +132,5 @@ div.swiper-pagination {
   height: 13px;
   background-color: #fd9222;
   border-radius: 20px;
+  margin: 0 !important;
 }
