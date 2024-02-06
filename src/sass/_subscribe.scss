@@ -69,6 +69,67 @@
   background-color: #fcf1e0;
 }
 
+@media (max-width: 767px) {
+  .subscribe {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+      ),
+      url(/src/images/subscribe-mobile.jpg),
+      lightgray 0px -481.157px / 100% 375.122%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 375px;
+    padding: 62px 20px 63px 20px;
+    margin: 0 auto;
+  }
+
+  .subscribe-container {
+    display: flex;
+    width: 335px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .subscribe-heading {
+  width: 291px;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
+  }
+
+.subscribe-paragraph {
+  width: 326px;
+  }
+
+.subscribe-btn {
+ color: #FFF;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  padding: 12px 28px;
+  align-items: flex-start;
+  gap: 14px;
+  border-radius: 100px;
+  background: #fd9222;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+}
+
 // ===== MODAL =====
 
 .backdrop {
