@@ -6,7 +6,9 @@
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /Team6-Simply-Chocolatee/"
+    "deploy": "gh-pages -d dist"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/goitacademy/Team6-Simply-Chocolate.git"
