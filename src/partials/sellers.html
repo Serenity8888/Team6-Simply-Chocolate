@@ -1,48 +1,168 @@
 <section class="sellers" id="sellers">
   <div class="sellers-container container">
     <h2 class="sellers-heading"><span>TOP</span> SELLERS</h2>
-      <ul class="sellers-list">
-        <li class="sellers-item">
+    <ul class="sellers-list">
+      <li class="sellers-item">
+        <img
+          class="sellers-img"
+          src="/src/images/top-seller-img1-desktop.jpg"
+          alt="Coffee Bean"
+          width="368"
+          height="464"
+        />
+      </li>
+      <li class="sellers-item">
+        <div class="sellers-img-container">
           <img
             class="sellers-img"
-            src="/src/images/top-seller-img1-desktop.jpg"
-            alt="Coffee Bean"
+            src="/src/images/top-seller-img2-desktop.jpg"
+            alt="Almond Chocolate"
             width="368"
             height="464"
           />
-        </li>
-        <li class="sellers-item">
-          <div class="sellers-img-container">
-            <img
-              class="sellers-img"
-              src="/src/images/top-seller-img2-desktop.jpg"
-              alt="Almond Chocolate"
-              width="368"
-              height="464"
+        </div>
+      </li>
+      <li class="sellers-item">
+        <div class="sellers-img-container">
+          <img
+            class="sellers-img"
+            src="/src/images/top-seller-img3-desktop.jpg"
+            alt="Dark Chocolate"
+            width="368"
+            height="464"
+          />
+        </div>
+      </li>
+    </ul>
+    <div class="sellers-description-container">
+      <p class="sellers-paragraph">
+        Crazy enough chocolate originates from a bean just like the coffee bean
+        called Cacao. Cacao has been around for thousands of years and was first
+        discovered by the Native American tribe called the Mayans.
+      </p>
+      <button type="button" class="sellers-btn" sellers-data-modal-open>
+        Buy now
+      </button>
+    </div>
+    <div sellers-data-modal class="backdrop is-hidden">
+        <div class="sellers-modal">
+          <svg
+            class="sellers-modal-close"
+            width="16"
+            height="16"
+            sellers-data-modal-close
+          >
+            <use href="/src/images/icons.svg#close"></use>
+          </svg>
+          <h2 class="sellers-modal-heading">
+            <span>Buy</span> Now
+          </h2>
+          <ul class="buy-now-list">
+            <li class="buy-now-item">
+                <img class="buy-now-img" src="/src/images/buy-now-img1.jpg">
+                <span class="buy-now-span">100 g</span>
+            </li>
+            <li class="buy-now-item">
+                <img class="buy-now-img" src="/src/images/buy-now-img2.jpg">
+                <span class="buy-now-span">100 g</span>
+            </li>
+            <li class="buy-now-item">
+                <img class="buy-now-img" src="/src/images/buy-now-img2.jpg">
+                <span  class="buy-now-span">100 g</span>
+            </li>
+          </ul>
+              <form class="modalform">
+        <div class="input-container input-personalinfo-container">
+          <label class="input-label" for="user-name">Personal information</label>
+          <div class="input-area">
+            <input
+              class="input-data"
+              type="text"
+              id="user-name"
+              name="user-name"
+              placeholder="Name"
+              required
+            />
+            <input
+              class="input-data"
+              type="text"
+              id="user-surname"
+              name="user-surname"
+              placeholder="Surname"
+              required
             />
           </div>
-        </li>
-        <li class="sellers-item">
-          <div class="sellers-img-container">
-            <img
-              class="sellers-img"
-              src="/src/images/top-seller-img3-desktop.jpg"
-              alt="Dark Chocolate"
-              width="368"
-              height="464"
+        </div>
+        <div class="input-container input-email-container">
+          <label class="input-label" for="user-email">Email</label>
+          <div class="input-area input-email">
+            <input
+              class="input-data"
+              type="email"
+              id="user-email"
+              name="email"
+              placeholder="Enter your email"
+              required
             />
           </div>
-        </li>
-      </ul>
-      <div class="sellers-description-container">
-        <p class="sellers-paragraph">
-          Crazy enough chocolate originates from a bean just like the coffee
-          bean called Cacao. Cacao has been around for thousands of years and
-          was first discovered by the Native American tribe called the Mayans.
-        </p>
-        <button type="button" class="sellers-btn" hero-data-modal-open>Buy now</button>
+        </div>
+        <div class="input-container input-number-container">
+          <label class="input-label" for="user-number">Phone number</label>
+          <div class="input-area input-number-area">
+            <div class="flag-code">
+              <div class="flag">
+                <svg class="flag-icon" width="32" height="24">
+                  <use href="/src/images/icons.svg#flag"></use>
+                </svg>
+              </div>
+              <div class="code-number">
+                <p>+380</p>
+              </div>
+            </div>
+            <input
+              class="tel-number"
+              type="tel"
+              id="user-number"
+              name="user-tel"
+              placeholder="Phone number"
+              required
+            />
+          </div>
+        </div>
+        <div class="input-container input-card-container">
+          <label class="input-label" for="user-card">Card number</label>
+          <div class="input-area input-card">
+            <input
+              class="input-data"
+              type="text"
+              id="user-card"
+              name="card number"
+              placeholder="Enter card"
+              required
+            />
+            <svg class="mastercard-icon" width="30.171" height="18.408">
+              <use href="./images/icons.svg#icon-mastercard1"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="input-container input-user-comment-container">
+          <label class="input-label" for="user-comment">Comment</label>
+          <textarea
+            id="user-comment"
+            class="user-comment"
+            placeholder="Enter text"
+            name="user-comment"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <button class="submit-btn btn1" data-modal-close="buy-now" type="submit">
+          Buy now
+        </button>
+      </form>
+        </div>
       </div>
-
+      </div>
 
     <div class="sellers-mobile">
       <div class="sellers-mobile-container">
@@ -64,7 +184,9 @@
             src="/src/images/top-seller-img2-mobile.jpg"
             alt="Almond Chocolate"
           />
-          <button type="submit" class="sellers-mobile-btn" hero-data-modal-open>Buy now</button>
+          <button type="submit" class="sellers-mobile-btn" hero-data-modal-open>
+            Buy now
+          </button>
         </div>
       </div>
     </div>
