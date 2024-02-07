@@ -34,14 +34,19 @@ button {
   cursor: pointer;
 }
 
-.header {
-  padding: 24px 32px 32px 32px;
-}
-
 .header-container {
   display: flex;
+  width: 1136px;
+  height: 80px;
   align-items: center;
   gap: 188px;
+  position: fixed;
+  left: 50%;
+  top: -40px;
+  transform: translate(-50%, 50%);
+  z-index: 100;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
 }
 
 .header-logo-container {
@@ -138,7 +143,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 32px 72px 32px;
+  padding: 80px 32px 72px 32px;
 }
 
 .hero-container {
@@ -311,6 +316,10 @@ button {
   fill: var(--white);
 }
 
+.js-menu-container {
+  display: none;
+}
+
 /* Mobile View */
 @media only screen and (max-width: 767px) {
   .header {
@@ -322,6 +331,9 @@ button {
     display: flex;
     align-items: center;
     gap: 138px;
+    position: static;
+    height: 28px;
+    transform: none;
   }
 
   .nav-container {
@@ -478,11 +490,108 @@ button {
     background-color: var(--white);
     transition: background-color var(--animation);
   }
+
+  .js-menu-container.is-open {
+    transform: translate(-15%, 0%);
+  }
+
+  /* START OF MODAL STYLING */
+
+  .js-menu-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 220px;
+    height: 812px;
+    top: 0;
+    left: 50%;
+    transform: translateY(-101%);
+    padding: 136px 46px 500px 50px;
+    background: #1e1823;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+  }
+
+  .nav-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .close-menu-btn svg {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 21px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: white;
+  }
+
+  .close-menu-btn svg:hover,
+  .close-menu-btn svg:focus {
+    fill: rgba(253, 146, 34, 1);
+  }
+
+  .header-socials-modal {
+    position: absolute;
+    bottom: 24px;
+    left: 45px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    cursor: pointer;
+    fill: transparent;
+  }
+
+  .header-socials-modal svg {
+    width: 24px;
+    height: 24px;
+    stroke: #fff;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-socials-modal svg:hover,
+  .header-socials-modal svg:focus {
+    stroke: rgba(253, 146, 34, 1);
+  }
+
+  .nav-menu-link {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: -0.28px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link:focus {
+    color: #fd9222;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    position: relative;
+  }
   .header {
     padding: 24px 32px;
+    position: relative;
   }
 
   .nav-container {
@@ -529,6 +638,9 @@ button {
     display: flex;
     align-items: center;
     gap: 503px;
+    position: static;
+    height: 32px;
+    transform: none;
   }
 
   .hero {
@@ -559,44 +671,97 @@ button {
   .hero-navigation-container {
     gap: 119px;
   }
-}
 
-/* START OF MODAL STYLING */
+  .js-menu-container.is-open {
+    transform: translate(-2%, 0);
+  }
 
-.backdrop,
-.backdrop * {
-  box-sizing: content-box;
-  margin: 0;
-  padding: 0;
-}
+  /* START OF MODAL STYLING */
 
-.backdrop {
-  background: rgba(46, 47, 66, 0.4);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 1;
-  transition-property: visibility, opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: auto;
-  transform: scale(1);
-  z-index: 9999;
-}
+  .js-menu-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 290px;
+    height: 1024px;
+    top: 0;
+    left: 63%;
+    transform: translateY(-101%);
+    padding: 156px 81px 692px 85px;
+    background: #1e1823;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 260;
+  }
 
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0.5);
-}
+  .nav-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
 
-.field-wrap {
-  position: relative;
+  .close-menu-btn svg {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 21px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: white;
+  }
+
+  .close-menu-btn svg:hover,
+  .close-menu-btn svg:focus {
+    fill: rgba(253, 146, 34, 1);
+  }
+
+  .header-socials-modal {
+    position: absolute;
+    bottom: 24px;
+    left: 45px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    cursor: pointer;
+    fill: transparent;
+  }
+
+  .header-socials-modal svg {
+    width: 24px;
+    height: 24px;
+    stroke: #fff;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-socials-modal svg:hover,
+  .header-socials-modal svg:focus {
+    stroke: rgba(253, 146, 34, 1);
+  }
+
+  .nav-menu-link {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: -0.28px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link:focus {
+    color: #fd9222;
+  }
 }
