@@ -286,11 +286,6 @@ button {
   transition: fill var(--animation);
 }
 
-.hero-scroll-down:hover,
-.hero-scroll-down:focus {
-  fill: white
-}
-
 .hero-scroll-container {
   display: flex;
   width: 163px;
@@ -315,11 +310,6 @@ button {
 .hero-scroll-button:hover a,
 .hero-scroll-button:focus a {
   background-color: var(--orange);
-}
-
-.hero-scroll-button:hover svg,
-.hero-scroll-button:focus svg {
-  fill: var(--white);
 }
 
 .backdrop {
@@ -383,7 +373,6 @@ button {
   margin: 0 auto;
   margin-bottom: 32px;
   text-align: center;
-  
 }
 
 .hero-modal-heading span {
@@ -403,7 +392,7 @@ button {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  margin-bottom: 40px
+  margin-bottom: 40px;
 }
 
 .buy-now-item {
@@ -661,7 +650,7 @@ button {
   flex: 1 0 0;
   align-self: stretch;
   border-radius: 13px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1.5px solid rgba(17, 17, 17, 0.05);
   /* box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03); */
 }
@@ -706,9 +695,9 @@ button {
 .submit-btn {
   width: 133px;
   height: 45px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 14px;
-  background: #FD9222;
+  background: #fd9222;
   gap: 14px;
   border: none;
   cursor: pointer;
@@ -717,7 +706,7 @@ button {
 }
 .modal-close:hover,
 .modal-close:focus {
-  stroke: #FD9222;
+  stroke: #fd9222;
 }
 
 .js-menu-container {
