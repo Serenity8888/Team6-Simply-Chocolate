@@ -95,39 +95,38 @@
   }
 
   .subscribe-heading {
-  width: 291px;
-  color: #FFF;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px; /* 120% */
-  letter-spacing: -0.6px;
-  text-transform: uppercase;
+    width: 291px;
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 120% */
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
   }
 
-.subscribe-paragraph {
-  width: 326px;
+  .subscribe-paragraph {
+    width: 326px;
   }
 
-.subscribe-btn {
- color: #FFF;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  display: flex;
-  padding: 12px 28px;
-  align-items: flex-start;
-  gap: 14px;
-  border-radius: 100px;
-  background: #fd9222;
-  cursor: pointer;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+  .subscribe-btn {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    padding: 12px 28px;
+    align-items: flex-start;
+    gap: 14px;
+    border-radius: 100px;
+    background: #fd9222;
+    cursor: pointer;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 // ===== MODAL =====
@@ -294,4 +293,25 @@
 .subscribe-modal-btn:focus {
   color: #fd9222;
   background-color: #fcf1e0;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .subscribe {
+    display: flex;
+    padding: 72px 151px 72px 150px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+      ),
+      url(/src/images/subscribe-tablet.jpg),
+      lightgray -215px -481.157px / 156.25% 375.122%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 768px;
+    margin: 0 auto;
+  }
 }

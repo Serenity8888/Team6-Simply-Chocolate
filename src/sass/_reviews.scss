@@ -1,8 +1,5 @@
 .reviews {
-  padding-left: 32px;
-  padding-right: 32px;
-  margin-top: 128px;
-  margin-bottom: 128px;
+  padding: 128px 32px;
 }
 
 .reviews-container {
@@ -446,4 +443,38 @@ li.swiper-slide {
 .reviews-modal-btn:focus {
   color: #fd9222;
   background: #fcf1e0;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .reviews {
+    padding: 100px 32px;
+  }
+
+  .reviews-container {
+    display: flex;
+    width: 704px;
+    height: 463px;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  li.swiper-slide {
+    width: 344px !important;
+    height: 242px;
+  }
+
+  .reviews-description-paragraph {
+    width: 344px;
+    height: 200px;
+    border-radius: 15px;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    background: #fff;
+    box-shadow: 0px 9.049px 26.572px 0px rgba(215, 228, 249, 0.25);
+    padding: 104px 16px 26px;
+  }
+
+  ul.swiper-wrapper {
+    gap: 16px;
+  }
 }
