@@ -318,10 +318,10 @@ button {
   }
 
   .header-container {
+    width: 335px;
     display: flex;
     align-items: center;
     gap: 138px;
-    justify-content: center;
   }
 
   .nav-container {
@@ -342,15 +342,6 @@ button {
   .header-logo span {
     color: #111;
     font-family: Montserrat;
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: -0.42px;
-  }
-  .header-logo-style {
-    font-family: Montserrat;
-    font-style: italic;
     font-size: 14px;
     font-style: italic;
     font-weight: 700;
@@ -486,6 +477,87 @@ button {
     justify-content: center;
     background-color: var(--white);
     transition: background-color var(--animation);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .header {
+    padding: 24px 32px;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  .header-logo {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.42px;
+  }
+
+  .header-logo span {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.42px;
+  }
+
+  .icon-logo {
+    width: 21px;
+    height: 21px;
+  }
+
+  .header-burger-menu {
+    display: flex;
+    background-color: transparent;
+  }
+
+  .header-icon-burger {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-container {
+    width: 704px;
+    display: flex;
+    align-items: center;
+    gap: 503px;
+  }
+
+  .hero {
+    padding: 0px 32px 50px;
+  }
+
+  .hero-container {
+    background: linear-gradient(
+        180deg,
+        var(--black-gradient1) 0%,
+        var(--black-gradient2) 100%
+      ),
+      url('/src/images/hero-bg.jpg'),
+      lightgrey -427.239px -24.924px / 195.428% 103.07% no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    width: 704px;
+    min-height: 890px;
+    padding: 671px 40px 40px;
+  }
+
+  .hero-content-container {
+    width: 624px;
+  }
+
+  .hero-navigation-container {
+    gap: 119px;
   }
 }
 

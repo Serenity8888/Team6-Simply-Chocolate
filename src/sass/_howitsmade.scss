@@ -10,7 +10,6 @@
 .how-its-made-content-container {
   display: flex;
   width: 1136px;
-  height: 400px;
   align-items: flex-start;
   justify-content: space-between;
   gap: 20px;
@@ -204,4 +203,46 @@
     align-items: flex-start;
     gap: 18px;
   }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .how-its-made-container {
+    display: flex;
+    width: 614px;
+    min-height: 854px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .how-its-made-content-container {
+    display: flex;
+    width: 614px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .how-its-made-description-container {
+    display: flex;
+    width: 614px;
+    height: 356px;
+    padding: 32px;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .how-its-made-paragraph {
+    width: 350px;
+  }
+
+  .how-its-made-instruction {
+    width: 464px;
+  }
+
+  .how-its-made-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
 }
