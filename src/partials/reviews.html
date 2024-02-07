@@ -90,7 +90,7 @@
             chips for a snack.
           </p>
         </li>
-        <li class="swiper-slide">
+        <li class="swiper-slide" id="reviews">
           <div class="reviews-img-container">
             <div class="reviews-img-wrapper">
               <img
@@ -175,13 +175,27 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    var swiper = new Swiper('.mySwiper', {
+ 	var swiper = new Swiper('.mySwiper', {
+  pagination: {
+    el: '.pagination',
+  },
+  slidesPerView: 3,
+  spaceBetween: 28,
+  autoplay: {
+    delay: 3000,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    768: {
+      slidesPerView: 2.5,
+    },	
+    1200: {
       slidesPerView: 3,
-      spaceBetween: 28,
-      pagination: {
-        el: '.pagination',
-        clickable: true,
-      },
-    });
+    },
+    1: {
+      slidesPerView: 1,
+    },
+  },
+});
   </script>
 </section>

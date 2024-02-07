@@ -1,4 +1,4 @@
-<section class="products">
+<section class="products" id="products">
   <div class="products-container container">
     <h2 class="products-heading">OUR <span>PRODUCTS</span></h2>
     <div class="swiper mySwiper">
@@ -110,13 +110,27 @@
 <!-- Initialize Swiper -->
 <script>
   var swiper = new Swiper('.mySwiper', {
+    pagination: {
+      el: '.swiper-pagination',
+    },
     slidesPerView: 4,
     spaceBetween: 18,
     freeMode: true,
     loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      768: {
+        slidesPerView: 2.5,
+      },
+      1159: {
+        slidesPerView: 4,
+      },
+      1: {
+        slidesPerView: 1,
+      },
     },
   });
 </script>
