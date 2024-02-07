@@ -45,7 +45,7 @@ button {
   top: -40px;
   transform: translate(-50%, 50%);
   z-index: 100;
-  background-color: white;
+  background-color: transparent;
   border-radius: 0 0 10px 10px;
 }
 
@@ -317,6 +317,404 @@ button {
   fill: var(--white);
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hero-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 609px;
+  background: #fafafa;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 40px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.hero-modal-close:hover {
+  fill: #fd9222;
+}
+
+.hero-modal-heading {
+  color: #111;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+  width: 298px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  text-align: center;
+  
+}
+
+.hero-modal-heading span {
+  color: #fd9222;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+
+.buy-now-list {
+  display: flex;
+  width: 513px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px
+}
+
+.buy-now-item {
+  display: flex;
+  width: 160px;
+  padding: 24px 20px 18px 20px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background: #fff;
+}
+
+.buy-now-img {
+  width: 120px;
+  height: 107px;
+}
+
+.buy-now-span {
+  color: #111;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  padding: 8px 27px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px;
+  border-radius: 100px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background: #fafafa;
+}
+
+.hero-modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.hero-form-group {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  padding: 22px 24px;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-form-group:hover,
+.hero-form-group:focus {
+  box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+}
+
+.hero-modal-input {
+  width: 392px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  gap: 21.78px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border: none;
+  background: #fafafa;
+}
+
+.hero-modal-input::placeholder {
+  color: rgba(64, 64, 64, 0.3);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.hero-modal-input:hover,
+.hero-modal-input:focus {
+  outline-style: none;
+}
+.hero-tel-group {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag-number {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 18px;
+  width: 125px;
+  margin-right: 28px;
+  border-right: 3px solid rgba(17, 17, 17, 0.05);
+}
+
+.country-code {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.hero-modal-textarea {
+  display: flex;
+  align-items: center;
+  gap: 21.78px;
+  flex: 1 0 0;
+  align-self: stretch;
+  padding: 22px 24px 93px 24px;
+  max-width: 513px;
+  resize: none;
+  background: #fafafa;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-modal-textarea::placeholder {
+  color: rgba(64, 64, 64, 0.3);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.hero-modal-textarea:focus,
+.hero-modal-textarea:hover {
+  box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+  outline-style: none;
+}
+
+.hero-modal-btn {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: inline-flex;
+  padding: 14px 40px;
+  align-self: flex-start;
+  gap: 14px;
+  border-radius: 100px;
+  background: #fd9222;
+  border: none;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-modal-btn:hover,
+.hero-modal-btn:focus {
+  color: #fd9222;
+  background: #fcf1e0;
+}
+.modalform {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 8px;
+  gap: 18px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.input-label {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+}
+.input-area {
+  display: flex;
+  gap: 21px;
+}
+.input-personalinfo-container .input-data {
+  width: 246px;
+}
+.input-data {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  gap: 21.78px;
+  flex: 1 0 0;
+  align-self: stretch;
+  padding: 22px 24px;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  /* box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03); */
+}
+.input-data::placeholder,
+.tel-number::placeholder,
+.user-comment::placeholder {
+  color: rgba(64, 64, 64, 0.3);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+.input-email-container,
+.input-card-container,
+.input-personalinfo-container {
+  width: 509px;
+}
+.flag-code {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+  width: 125px;
+  height: 32px;
+  box-shadow: 2.722px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+.flag {
+  width: 22px;
+}
+.flag-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tel-number {
+  width: 237px;
+  margin-top: 6px;
+  border: none;
+}
+.input-number-area {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: 509px;
+  height: 66px;
+  padding: 17px 24px;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 13px;
+  background-color: #FFFFFF;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  /* box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03); */
+}
+.code-number {
+  display: flex;
+  width: 60px;
+  height: 22px;
+  padding-right: 20px;
+  border: none;
+  text-align: center;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+.input-card {
+  position: relative;
+}
+.mastercard-icon {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-data:focus,
+.tel-number:focus,
+.code-number:focus,
+.user-comment:focus {
+  outline: none;
+}
+.user-comment {
+  width: 509px;
+  height: 137px;
+  padding: 22px 24px 22px 24px;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  resize: none;
+}
+.submit-btn {
+  width: 133px;
+  height: 45px;
+  color: #FFFFFF;
+  font-size: 14px;
+  background: #FD9222;
+  gap: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+.modal-close:hover,
+.modal-close:focus {
+  stroke: #FD9222;
+}
+
 .js-menu-container {
   display: none;
 }
@@ -583,6 +981,130 @@ button {
   .nav-menu-link:hover,
   .nav-menu-link:focus {
     color: #fd9222;
+  }
+  .icon-scroll {
+    width: 16px;
+    height: 16px;
+  }
+  .modal-window {
+    height: 100%;
+  }
+  .backdrop {
+    width: 311px;
+    height: 100%;
+    gap: 32px;
+    padding: 32px 24px;
+  }
+  .backdrop h2 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.6px;
+  }
+  .choco-list {
+    flex-direction: column;
+  }
+  .choco-list-item {
+    width: 263px;
+    height: 85px;
+    flex-direction: row;
+    padding: 8px 16px;
+    justify-content: space-between;
+  }
+  .buynow-chocolate-image {
+    width: 84px;
+    height: 69px;
+  }
+  .modal-buynow-btn {
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 29px;
+    padding: 0;
+  }
+  .close-button {
+    top: 14px;
+    right: 14px;
+  }
+  .modalform {
+    width: 263px;
+    margin-top: 0;
+  }
+  .input-area {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .input-data {
+    width: 262px;
+    height: 45px;
+    padding: 14px 18px;
+  }
+  .input-data::placeholder,
+  .tel-number::placeholder,
+  .user-comment::placeholder {
+    font-size: 14px;
+    letter-spacing: -0.28px;
+  }
+  .input-label {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+  }
+  .input-number-area {
+    height: 45px;
+    width: 262px;
+    padding: 10px 18px;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+  }
+  .flag-code {
+    width: 74px;
+    height: 25px;
+    display: flex;
+    gap: 8px;
+    box-shadow: 1.5px 0px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+  .flag {
+    width: 24px;
+    height: 24px;
+    padding-top: 3px;
+  }
+  .flag-icon {
+    width: 24px;
+    height: 18px;
+  }
+  .code-number {
+    font-size: 14px;
+    letter-spacing: -0.28px;
+    padding-top: 2px;
+  }
+  .tel-number {
+    width: 128px;
+    height: 24px;
+    display: flex;
+    margin-top: 0;
+  }
+  .tel-number::placeholder {
+    font-size: 14px;
+    letter-spacing: -0.28px;
+  }
+  .input-card {
+    position: relative;
+  }
+  .mastercard-icon {
+    position: absolute;
+    left: 218px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .user-comment {
+    height: 91px;
+    width: 262px;
+    padding: 14px 18px;
+  }
+  .submit-btn {
+    width: 109px;
+    height: 41px;
   }
 }
 

@@ -120,7 +120,7 @@
 
         <div class="hero-navigation-container">
           <div class="hero-buttons-container">
-            <button class="buy-button" type="button">Buy now</button>
+            <button class="buy-button" type="button" hero-data-modal-open>Buy now</button>
             <a href="#how-its-made">
             <button class="how-button" type="button">How it's made</button>
             </a>
@@ -139,6 +139,124 @@
           </a>
         </div>
       </div>
+    <div hero-data-modal class="backdrop is-hidden">
+      <div class="hero-modal">
+        <svg
+          class="hero-modal-close"
+          width="16"
+          height="16"
+          hero-data-modal-close
+        >
+          <use href="/src/images/icons.svg#close"></use>
+        </svg>
+        <h2 class="hero-modal-heading">
+          <span>Buy</span> Now
+        </h2>
+        <ul class="buy-now-list">
+          <li class="buy-now-item">
+              <img class="buy-now-img" src="/src/images/buy-now-img1.jpg">
+              <span class="buy-now-span">100 g</span>
+          </li>
+          <li class="buy-now-item">
+              <img class="buy-now-img" src="/src/images/buy-now-img2.jpg">
+              <span class="buy-now-span">100 g</span>
+          </li>
+          <li class="buy-now-item">
+              <img class="buy-now-img" src="/src/images/buy-now-img2.jpg">
+              <span  class="buy-now-span">100 g</span>
+          </li>
+        </ul>
+            <form class="modalform">
+      <div class="input-container input-personalinfo-container">
+        <label class="input-label" for="user-name">Personal information</label>
+        <div class="input-area">
+          <input
+            class="input-data"
+            type="text"
+            id="user-name"
+            name="user-name"
+            placeholder="Name"
+            required
+          />
+          <input
+            class="input-data"
+            type="text"
+            id="user-surname"
+            name="user-surname"
+            placeholder="Surname"
+            required
+          />
+        </div>
+      </div>
+      <div class="input-container input-email-container">
+        <label class="input-label" for="user-email">Email</label>
+        <div class="input-area input-email">
+          <input
+            class="input-data"
+            type="email"
+            id="user-email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+      </div>
+      <div class="input-container input-number-container">
+        <label class="input-label" for="user-number">Phone number</label>
+        <div class="input-area input-number-area">
+          <div class="flag-code">
+            <div class="flag">
+              <svg class="flag-icon" width="32" height="24">
+                <use href="/src/images/icons.svg#flag"></use>
+              </svg>
+            </div>
+            <div class="code-number">
+              <p>+380</p>
+            </div>
+          </div>
+          <input
+            class="tel-number"
+            type="tel"
+            id="user-number"
+            name="user-tel"
+            placeholder="Phone number"
+            required
+          />
+        </div>
+      </div>
+      <div class="input-container input-card-container">
+        <label class="input-label" for="user-card">Card number</label>
+        <div class="input-area input-card">
+          <input
+            class="input-data"
+            type="text"
+            id="user-card"
+            name="card number"
+            placeholder="Enter card"
+            required
+          />
+          <svg class="mastercard-icon" width="30.171" height="18.408">
+            <use href="./images/icons.svg#icon-mastercard1"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="input-container input-user-comment-container">
+        <label class="input-label" for="user-comment">Comment</label>
+        <textarea
+          id="user-comment"
+          class="user-comment"
+          placeholder="Enter text"
+          name="user-comment"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <button class="submit-btn btn1" data-modal-close="buy-now" type="submit">
+        Buy now
+      </button>
+    </form>
+      </div>
+    </div>
     </div>
   </div>
 </section>
