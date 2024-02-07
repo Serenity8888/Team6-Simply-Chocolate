@@ -286,6 +286,11 @@ button {
   transition: fill var(--animation);
 }
 
+.hero-scroll-down:hover,
+.hero-scroll-down:focus {
+  fill: white
+}
+
 .hero-scroll-container {
   display: flex;
   width: 163px;
@@ -307,13 +312,13 @@ button {
   color: var(--orange);
 }
 
-.hero-scroll-container:hover a,
-.hero-scroll-container:focus a {
+.hero-scroll-button:hover a,
+.hero-scroll-button:focus a {
   background-color: var(--orange);
 }
 
-.hero-scroll-container:hover svg,
-.hero-scroll-container:focus svg {
+.hero-scroll-button:hover svg,
+.hero-scroll-button:focus svg {
   fill: var(--white);
 }
 
